@@ -29,10 +29,6 @@
     <body>
         <h1>Sake Diary</h1>
         <form>
-            Name (kanji):  <input type="text" name="kanji"><br>
-            Name (kana):   <input type="text" name="kana"><br>
-            Name (romaji): <input type="text" name="romaji"><br>
-            Grade: <input type="text" name="grade" list="grades"> BY: <input type="text" name="by"><br>
             <datalist id="grades">
                 <option value="Junmai Daiginjo">
                 <option value="Junmai Ginjo">
@@ -40,44 +36,53 @@
                 <option value="Honjozo">
                 <option value="Futsu">
             </datalist>
-            <h2>Details</h2>
-            Nihonshu-do: <input type="text" name="nihonshudo"><br>
-            Seimai-buai: <input type="text" name="seimaibuai"><br>
-            Sando: <input type="text" name="sando"><br>
-            Zairyo: <input type="text" name="zairyo"><br>
-            <h3>Shuzo</h3>
-            Name: <input type="text" name="shuzo"><br>
-            Location: <input type="text" name="location"><br>
-            URL: <input type="text" name="url">
-            <h2>Impressions</h2>
-            Date: <input type="text" name="date">
-            Place: <input type="text" name="place">
-            Taste: <select name="taste">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            Smell: <select name="smell">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            Notes: <br>
-            <textarea></textarea>
+            <fieldset><legend>Identification</legend>
+                Name (kanji):  <input type="text" name="kanji"><br>
+                Name (kana):   <input type="text" name="kana"><br>
+                Name (romaji): <input type="text" name="romaji"><br>
+                Grade: <input type="text" name="grade" list="grades"> BY: <input type="text" name="by"><br>
+            </fieldset>
+            <fieldset><legend>Details</legend>
+                Nihonshu-do: <input type="text" name="nihonshudo"><br>
+                Seimai-buai: <input type="text" name="seimaibuai"><br>
+                Sando: <input type="text" name="sando"><br>
+                Zairyo: <input type="text" name="zairyo"><br>
+            </fieldset>
+            <fieldset><legend>Shuzo (酒造)</legend>
+                Name: <input type="text" name="shuzo"><br>
+                Location: <input type="text" name="location"><br>
+                URL: <input type="text" name="url">
+            </fieldset>
+            <fieldset><legend>Impressions</legend>
+                Date: <input type="date" name="date">
+                Place: <input type="text" name="place">
+                Taste: <select name="taste">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                Smell: <select name="smell">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                Notes: <br>
+                <textarea></textarea>
+            </fieldset>
         </form>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
