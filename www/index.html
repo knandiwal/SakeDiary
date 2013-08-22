@@ -23,15 +23,61 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Sake Diary</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+        <h1>Sake Diary</h1>
+        <form>
+            Name (kanji):  <input type="text" name="kanji"><br>
+            Name (kana):   <input type="text" name="kana"><br>
+            Name (romaji): <input type="text" name="romaji"><br>
+            Grade: <input type="text" name="grade" list="grades"> BY: <input type="text" name="by"><br>
+            <datalist id="grades">
+                <option value="Junmai Daiginjo">
+                <option value="Junmai Ginjo">
+                <option value="Ginjo">
+                <option value="Honjozo">
+                <option value="Futsu">
+            </datalist>
+            <h2>Details</h2>
+            Nihonshu-do: <input type="text" name="nihonshudo"><br>
+            Seimai-buai: <input type="text" name="seimaibuai"><br>
+            Sando: <input type="text" name="sando"><br>
+            Zairyo: <input type="text" name="zairyo"><br>
+            <h3>Shuzo</h3>
+            Name: <input type="text" name="shuzo"><br>
+            Location: <input type="text" name="location"><br>
+            URL: <input type="text" name="url">
+            <h2>Impressions</h2>
+            Date: <input type="text" name="date">
+            Place: <input type="text" name="place">
+            Taste: <select name="taste">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            Smell: <select name="smell">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            Notes: <br>
+            <textarea></textarea>
+        </form>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
