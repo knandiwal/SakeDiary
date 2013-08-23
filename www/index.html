@@ -1,28 +1,10 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=yes, target-densityDpi=device-dpi;" />
+        <meta name="viewport" content="width=device-width, hight=device-height, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=yes, target-densityDpi=device-dpi;" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Sake Diary</title>
     </head>
@@ -38,15 +20,16 @@
             </datalist>
             <fieldset><legend>Identification</legend>
                 <label for="kanji">Name (漢字):</label><input type="text" name="kanji"><br>
-                <label for="kana">Name (カナ):</label><input type="text" name="kana"><br>
+                <label for="kana">Name (カナ):</label><input type="textPhonetic" name="kana"><br>
                 <label for="romaji">Name (ABC):</label><input type="text" name="romaji"><br>
                 <label for="grade">Grade:</label><input type="text" name="grade" list="grades"><br>
                 <label for="by">YY/MM:</label><input type="text" name="by">
             </fieldset>
             <fieldset><legend>Details</legend>
-                <label for="nohonshudo">SMV (日本酒度):</label><input type="text" name="nihonshudo"><br>
-                <label for="seimaibuai">Milling (精米歩合):</label><input type="text" name="seimaibuai"><br>
-                <label for="sando">Acidity (酸度):</label><input type="text" name="sando"><br>
+                <label for="nihonshudo">SMV (日本酒度):</label><input type="number" name="nihonshudo"><br>
+                <label for="seimaibuai">Milling (精米歩合):</label><input type="number" name="seimaibuai"><br>
+                <label for="sando">Acidity (酸度):</label><input type="number" name="sando"><br>
+                <label for="amino">Amino Acid (アミノ酸度):</label><input type="number" name="amino"><br>
                 <label for="zairyo">Ingredients (材料):</label><input type="text" name="zairyo"><br>
             </fieldset>
             <fieldset><legend>Shuzo (酒造)</legend>
@@ -57,72 +40,81 @@
             <fieldset><legend>Impressions</legend>
                 <label for="when">When:</label><input type="date" name="when">
                 <label for="where">Where:</label><input type="text" name="where">
-                <div><label for="fragrance">Fragrance:</label>
-                <select name="fragrance">
+                <table border="0" cellpadding="0"><tr>
+                <td><label for="fragrance">Fragrance:</label></td>
+                <td><select name="fragrance">
                     <option value="1">1 -- None</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Fragrant</option>
-                </select></div>
-                <div><label for="impact">Impact:</label>
-                <select name="impact">
+                </select></td>
+                </tr><tr>
+                <td><label for="impact">Impact:</label></td>
+                <td><select name="impact">
                     <option value="1">1 -- Quiet</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Explosive</option>
-                </select></div>
-                <div><label for="dryness">Dryness:</label>
-                <select name="dryness">
+                </select></td>
+                </tr><tr>
+                <td><label for="dryness">Dryness:</label></td>
+                <td><select name="dryness">
                     <option value="1">1 -- Sweet</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Dry</option>
-                </select></div>
-                <div><label for="acidity">Acidity:</label>
-                <select name="acidity">
+                </select></td>
+                </tr><tr>
+                <td><label for="acidity">Acidity:</label></td>
+                <td><select name="acidity">
                     <option value="1">1 -- Soft</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Puckering</option>
-                </select></div>
-                <div><label for="presence">Presence:</label>
-                <select name="presence">
+                </select></td>
+                </tr><tr>
+                <td><label for="presence">Presence:</label></td>
+                <td><select name="presence">
                     <option value="1">1 -- Unassuming</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Full</option>
-                </select></div>
-                <div><label for="complexity">Complexity:</label>
-                <select name="complexity">
+                </select></td>
+                </tr><tr>
+                <td><label for="complexity">Complexity:</label></td>
+                <td><select name="complexity">
                     <option value="1">1 -- Straightforward</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Complex</option>
-                </select></div>
-                <div><label for="earthiness">Earthiness:</label>
-                <select name="earthiness">
+                </select></td>
+                </tr><tr>
+                <td><label for="earthiness">Earthiness:</label></td>
+                <td><select name="earthiness">
                     <option value="1">1 -- Delicate</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Dank</option>
-                </select></div>
-                <div><label for="tail">Tail:</label>
-                <select name="tail">
+                </select></td>
+                </tr><tr>
+                <td><label for="tail">Tail:</label></td>
+                <td><select name="tail">
                     <option value="1">1 -- Brief</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 -- Pervasive</option>
-                </select></div>
-                <label for="notes">Notes:</label><br>
-                <textarea name="notes" columns="40" rows="4"></textarea>
+                </select></td>
+                </tr></table>
+                <label for="notes">Other Notes:</label><br>
+                <textarea name="notes" rows="4"></textarea>
             </fieldset>
         </form>
         </div>
