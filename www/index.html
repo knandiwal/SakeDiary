@@ -37,27 +37,36 @@
                 <option value="Futsu">
             </datalist>
             <fieldset><legend>Identification</legend>
-                <label for="kanji">Name (漢字):</label><div class="entry"><input type="text" name="kanji"></div>
-                <label for="kana">Name (カナ):</label><div class="entry"><input type="text" name="kana"></div>
-                <label for="romaji">Name (ABC):</label><div class="entry"><input type="text" name="romaji"></div>
-                <label for="grade">Grade:</label><div class="entry"><input type="text" name="grade" list="grades"></div>
-                <label for="by">YY/MM:</label><div class="entry"><input type="text" name="by"></div>
+                <label for="kanji">Name (漢字):</label><input type="text" name="kanji"><br>
+                <label for="kana">Name (カナ):</label><input type="text" name="kana"><br>
+                <label for="romaji">Name (ABC):</label><input type="text" name="romaji"><br>
+                <label for="grade">Grade:</label><input type="text" name="grade" list="grades"><br>
+                <label for="by">YY/MM:</label><input type="text" name="by">
             </fieldset>
             <fieldset><legend>Details</legend>
-                <label for="nohonshudo">SMV (日本酒度):</label> <input type="text" name="nihonshudo"><br>
-                <label for="seimaibuai">Milling (精米歩合):</label> <input type="text" name="seimaibuai"><br>
-                <label for="sando">Acidity (酸度):</label> <input type="text" name="sando"><br>
-                <label for="zairyo">Ingredients (材料):</label> <input type="text" name="zairyo"><br>
+                <label for="nohonshudo">SMV (日本酒度):</label><input type="text" name="nihonshudo"><br>
+                <label for="seimaibuai">Milling (精米歩合):</label><input type="text" name="seimaibuai"><br>
+                <label for="sando">Acidity (酸度):</label><input type="text" name="sando"><br>
+                <label for="zairyo">Ingredients (材料):</label><input type="text" name="zairyo"><br>
             </fieldset>
             <fieldset><legend>Shuzo (酒造)</legend>
-                <label for="shuzo">Name:</label> <input type="text" name="shuzo"><br>
-                <label for="location">Location:</label> <input type="text" name="location"><br>
-                <label for="url">URL:</label> <input type="text" name="url">
+                <label for="shuzo">Name:</label><input type="text" name="shuzo"><br>
+                <label for="location">Location:</label><input type="text" name="location"><br>
+                <label for="url">URL:</label><input type="text" name="url">
             </fieldset>
             <fieldset><legend>Impressions</legend>
                 <label for="when">When:</label> <input type="date" name="when">
                 <label for="where">Where:</label> <input type="text" name="where">
-                <label for="fragrance">Fragrance:</label>
+                <!--
+                <label for="fragrance">Fragrance:</label><br>None -->
+                <fieldset><legend>Fragrance</legend>
+                <input type="radio" name="fragrance" value="0" checked>
+                <input type="radio" name="fragrance" value="1">
+                <input type="radio" name="fragrance" value="2">
+                <input type="radio" name="fragrance" value="3">
+                <input type="radio" name="fragrance" value="4">Fragrant
+                </fieldset>
+                <!--
                 <select name="fragrance">
                     <option value="0">0 -- None</option>
                     <option value="2">2</option>
@@ -69,6 +78,7 @@
                     <option value="8">8</option>
                     <option value="9">9 -- Fragrant</option>
                 </select><br>
+            -->
                 <label for="impact">Impact:</label>
                 <select name="impact">
                     <option value="0">0 -- Quiet</option>
