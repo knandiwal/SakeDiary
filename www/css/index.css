@@ -62,3 +62,11 @@ form select {
     padding: 0;
     margin: 5px 0 0;
 }
+
+form textarea {
+    display: block;
+    float: right;
+    width: 80%;
+    padding: 0;
+    margin: 5px 0 0;
+}
