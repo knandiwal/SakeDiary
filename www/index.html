@@ -23,7 +23,7 @@
                 <label for="kana">Name (カナ):</label><input type="textPhonetic" name="kana"><br>
                 <label for="romaji">Name (ABC):</label><input type="text" name="romaji"><br>
                 <label for="grade">Grade:</label><input type="text" name="grade" list="grades"><br>
-                <label for="by">YY/MM:</label><input type="text" name="by">
+                <label for="vintage">Brewed (製造年月):</label><input type="text" name="vintage">
             </fieldset>
             <fieldset><legend>Details</legend>
                 <label for="nihonshudo">SMV (日本酒度):</label><input type="number" name="nihonshudo"><br>
@@ -35,11 +35,62 @@
             <fieldset><legend>Shuzo (酒造)</legend>
                 <label for="shuzo">Name:</label><input type="text" name="shuzo"><br>
                 <label for="location">Location:</label><input type="text" name="location"><br>
+                <label for="prefecture">Prefecture:</label>
+                <select name="prefecture">
+                    <option value="JP-01">Hokkaido</option>
+                    <option value="JP-02">Aomori</option>
+                    <option value="JP-03">Iwate</option>
+                    <option value="JP-04">Miyagi</option>
+                    <option value="JP-05">Akita</option>
+                    <option value="JP-06">Yamagata</option>
+                    <option value="JP-07">Fukushima</option>
+                    <option value="JP-08">Ibaraki</option>
+                    <option value="JP-09">Tochigi</option>
+                    <option value="JP-10">Gunma</option>
+                    <option value="JP-11">Saitama</option>
+                    <option value="JP-12">Chiba</option>
+                    <option value="JP-13">Tokyo</option>
+                    <option value="JP-14">Kanagawa</option>
+                    <option value="JP-15">Niigata</option>
+                    <option value="JP-16">Toyama</option>
+                    <option value="JP-17">Ishikawa</option>
+                    <option value="JP-18">Fukui</option>
+                    <option value="JP-19">Yamanashi</option>
+                    <option value="JP-20">Nagano</option>
+                    <option value="JP-21">Gifu</option>
+                    <option value="JP-22">Shizuoka</option>
+                    <option value="JP-23">Aichi</option>
+                    <option value="JP-24">Mie</option>
+                    <option value="JP-25">Shiga</option>
+                    <option value="JP-26">Kyoto</option>
+                    <option value="JP-27">Osaka</option>
+                    <option value="JP-28">Hyogo</option>
+                    <option value="JP-29">Nara</option>
+                    <option value="JP-30">Wakayama</option>
+                    <option value="JP-31">Tottori</option>
+                    <option value="JP-32">Shimane</option>
+                    <option value="JP-33">Okayama</option>
+                    <option value="JP-34">Hiroshima</option>
+                    <option value="JP-35">Yamaguchi</option>
+                    <option value="JP-36">Tokushima</option>
+                    <option value="JP-37">Kagawa</option>
+                    <option value="JP-38">Ehime</option>
+                    <option value="JP-39">Kochi</option>
+                    <option value="JP-40">Fukuoka</option>
+                    <option value="JP-41">Saga</option>
+                    <option value="JP-42">Nagasaki</option>
+                    <option value="JP-43">Kumamoto</option>
+                    <option value="JP-44">Oita</option>
+                    <option value="JP-45">Miyazaki</option>
+                    <option value="JP-46">Kagoshima</option>
+                    <option value="JP-47">Okinawa</option>
+                    <option value="UNK">Other</option>
+                </select><br>
                 <label for="url">URL:</label><input type="text" name="url">
             </fieldset>
             <fieldset><legend>Impressions</legend>
-                <label for="when">When:</label><input type="date" name="when">
-                <label for="where">Where:</label><input type="text" name="where">
+                <label for="when">When:</label><input type="date" name="when"><br>
+                <label for="where">Where:</label><input type="text" name="where"><br>
                 <table border="0" cellpadding="0"><tr>
                 <td><label for="fragrance">Fragrance:</label></td>
                 <td><select name="fragrance">
