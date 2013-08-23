@@ -5,21 +5,7 @@
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: text;
-    /*
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    */
+    -webkit-user-select: text;                  /* allow user to cut/paste to fields */
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:18px;
     height:100%;
@@ -38,6 +24,7 @@ h1 {
     text-align:center;
 }
 
+/*
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
@@ -49,19 +36,12 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
- /*
-.boxsizingBorder {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
 */
 
 form label { 
     display: block;  /* block float the labels to left column, set a width */
     float: left; 
-    width: 80%;
+    width: 50%;
     padding: 0;
     margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
     text-align: left;
@@ -75,10 +55,10 @@ form input {
     margin: 5px 0 0;
 }
 
-form .entry {
-    display: block;
+form select {
+    display: inline;
     float: right;
-    width: 80%;
+    width: 50%;
     padding: 0;
     margin: 5px 0 0;
 }
