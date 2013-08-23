@@ -37,17 +37,17 @@
                 <option value="Futsu">
             </datalist>
             <fieldset><legend>Identification</legend>
-                <label for="kanji">Name (kanji):</label>   <input type="text" name="kanji" size="30"><br>
-                <label for="kana">Name (kana):</label>     <input type="text" name="kana"><br>
-                <label for="romaji">Name (romaji):</label> <input type="text" name="romaji"><br>
-                <label for="grade">Grade:</label>          <input type="text" name="grade" list="grades"><br>
-                <label for="by">BY:</label>                <input type="text" name="by"><br>
+                <label for="kanji">Name (漢字):</label><input type="text" name="kanji"><br>
+                <label for="kana">Name (カナ):</label><input type="text" name="kana"><br>
+                <label for="romaji">Name (ABC):</label><input type="text" name="romaji"><br>
+                <label for="grade">Grade:</label><input type="text" name="grade" list="grades"><br>
+                <label for="by">YY/MM:</label><input type="text" name="by"><br>
             </fieldset>
             <fieldset><legend>Details</legend>
-                <label for="nohonshudo">Nihonshu-do:</label> <input type="text" name="nihonshudo"><br>
-                <label for="seimaibuai">Seimai-buai:</label> <input type="text" name="seimaibuai"><br>
-                <label for="sando">Sando:</label> <input type="text" name="sando"><br>
-                <label for="zairyo">Zairyo:</label> <input type="text" name="zairyo"><br>
+                <label for="nohonshudo">SMV (日本酒度):</label> <input type="text" name="nihonshudo"><br>
+                <label for="seimaibuai">Milling (精米歩合):</label> <input type="text" name="seimaibuai"><br>
+                <label for="sando">Acidity (酸度):</label> <input type="text" name="sando"><br>
+                <label for="zairyo">Ingredients (材料):</label> <input type="text" name="zairyo"><br>
             </fieldset>
             <fieldset><legend>Shuzo (酒造)</legend>
                 <label for="shuzo">Name:</label> <input type="text" name="shuzo"><br>
@@ -55,10 +55,23 @@
                 <label for="url">URL:</label> <input type="text" name="url">
             </fieldset>
             <fieldset><legend>Impressions</legend>
-                <label for="date">Date:</label> <input type="date" name="date">
-                <label for="place">Place:</label> <input type="text" name="place">
-                <label for="taste">Taste:</label>
-                <select name="taste">
+                <label for="when">When:</label> <input type="date" name="when">
+                <label for="where">Where:</label> <input type="text" name="where">
+                <label for="fragrance">Fragrance:</label>
+                <select name="fragrance">
+                    <option value="0">0 -- None</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9 -- Fragrant</option>
+                </select><br>
+                <label for="impact">Impact:</label>
+                <select name="impact">
+                    <option value="0">0 -- Quiet</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -67,11 +80,11 @@
                     <option value="6">6</option>
                     <option value="7">7</option>
                     <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label for="smell">Smell:</label>
-                <select name="smell">
+                    <option value="9">9 -- Explosive</option>
+                </select><br>
+                <label for="dryness">Dryness:</label>
+                <select name="dryness">
+                    <option value="0">0 -- Sweet</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -80,11 +93,75 @@
                     <option value="6">6</option>
                     <option value="7">7</option>
                     <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+                    <option value="9">9 -- Dry</option>
+                </select><br>
+                <label for="acidity">Acidity:</label>
+                <select name="acidity">
+                    <option value="0">0 -- Soft</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9 -- Puckering</option>
+                </select><br>
+                <label for="presence">Presence:</label>
+                <select name="presence">
+                    <option value="0">0 -- Unassuming</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9 -- Full</option>
+                </select><br>
+                <label for="complexity">Complexity:</label>
+                <select name="complexity">
+                    <option value="0">0 -- Straightforward</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9 -- Complex</option>
+                </select><br>
+                <label for="earthiness">Earthiness:</label>
+                <select name="earthiness">
+                    <option value="0">0 -- Delicate</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9 -- Dank</option>
+                </select><br>
+                <label for="tail">Tail:</label>
+                <select name="tail">
+                    <option value="0">0 -- Brief</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9 -- Pervasive</option>
+                </select><br>
                 <label for="notes">Notes:</label><br>
-                <textarea name="notes" rows="4"></textarea>
+                <textarea name="notes" columns="40" rows="4"></textarea>
             </fieldset>
         </form>
         </div>
