@@ -44,20 +44,21 @@
                 <label for="by">BY:</label>                <input type="text" name="by"><br>
             </fieldset>
             <fieldset><legend>Details</legend>
-                Nihonshu-do: <input type="text" name="nihonshudo"><br>
-                Seimai-buai: <input type="text" name="seimaibuai"><br>
-                Sando: <input type="text" name="sando"><br>
-                Zairyo: <input type="text" name="zairyo"><br>
+                <label for="nohonshudo">Nihonshu-do:</label> <input type="text" name="nihonshudo"><br>
+                <label for="seimaibuai">Seimai-buai:</label> <input type="text" name="seimaibuai"><br>
+                <label for="sando">Sando:</label> <input type="text" name="sando"><br>
+                <label for="zairyo">Zairyo:</label> <input type="text" name="zairyo"><br>
             </fieldset>
             <fieldset><legend>Shuzo (酒造)</legend>
-                Name: <input type="text" name="shuzo"><br>
-                Location: <input type="text" name="location"><br>
-                URL: <input type="text" name="url">
+                <label for="shuzo">Name:</label> <input type="text" name="shuzo"><br>
+                <label for="location">Location:</label> <input type="text" name="location"><br>
+                <label for="url">URL:</label> <input type="text" name="url">
             </fieldset>
             <fieldset><legend>Impressions</legend>
-                Date: <input type="date" name="date">
-                Place: <input type="text" name="place">
-                Taste: <select name="taste">
+                <label for="date">Date:</label> <input type="date" name="date">
+                <label for="place">Place:</label> <input type="text" name="place">
+                <label for="taste">Taste:</label>
+                <select name="taste">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -69,7 +70,8 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                Smell: <select name="smell">
+                <label for="smell">Smell:</label>
+                <select name="smell">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -81,8 +83,8 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                Notes: <br>
-                <textarea></textarea>
+                <label for="notes">Notes:</label><br>
+                <textarea name="notes" rows="4"></textarea>
             </fieldset>
         </form>
         </div>

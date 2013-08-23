@@ -96,6 +96,12 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 form label { 
     display: block;  /* block float the labels to left column, set a width */
     float: left; 
