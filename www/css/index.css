@@ -57,8 +57,24 @@ h1 {
 form label { 
     display: block;  /* block float the labels to left column, set a width */
     float: left; 
-    width: 100px; 
-    padding: 0; 
+    width: 80%;
+    padding: 0;
     margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
-    text-align: right; 
+    text-align: left;
+}
+
+form input {
+    display: block;
+    float: right;
+    width: 80%;
+    padding: 0;
+    margin: 5px 0 0;
+}
+
+form .entry {
+    display: block;
+    float: right;
+    width: 80%;
+    padding: 0;
+    margin: 5px 0 0;
 }
